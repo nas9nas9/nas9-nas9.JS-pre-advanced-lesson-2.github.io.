@@ -1,0 +1,108 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect', href='https://fonts.googleapis.com')
+  link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300&display=swap', rel='stylesheet')
+  link(rel='stylesheet', href='./style/style.min.css')
+  link(rel='stylesheet', href='./style/style.scss')
+  title Dreamshare
+.wrapper
+  header.header-box
+    .header-box__logo DREAMSHARE
+    .header-box__nav
+      .header-box__nav-item
+        .header-box__nav-link1 Log in
+      .header-box__nav-item
+        .header-box__nav-link1 Sign up
+  main
+    section.main-box
+      .main-box__header
+        h1.main-box__text
+          | SHARE YOUR 
+          br
+          |                 HOLIDAY DREAM
+        h2.main-box__description And find the perfect partner to fullfill it
+        button.main-box__button Find your holiday partner
+    section.works-box
+      .works-box__text
+        h1.works-box__text How Dreamshare works?
+      .works-box__images
+        .works-box__pic-first
+          button.works-box__button STEP 1
+          span.works-box__header Sed leo enim, condimentum
+          span.works-box__description
+            | Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+        .works-box__pic-second
+          button.works-box__button STEP 2
+          span.works-box__header Morbi velit risus
+          span.works-box__description
+            | Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+        .works-box__pic-third
+          button.works-box__button STEP 3
+          span.works-box__header Sed leo enim, condimentum
+          span.works-box__description
+            | Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+    section.partner-box
+      .partner-box__text Meet a partner for your best holiday
+      .partner-box__photo
+        .partner-box__photo-pic
+          .partner-box__photo-img.p1_photo.icon.music
+          span.partner-box__photo-name Bradley Hunter
+          span.partner-box__photo-description Based in Chicago. I love playing tennis and loud music.
+        .partner-box__photo-pic
+          .partner-box__photo-img.p2_photo.icon.brush
+          span.partner-box__photo-name Marie Bennett
+          span.partner-box__photo-description Currently living in Colorado. Lover of art, languages and travelling.
+        .partner-box__photo-pic
+          .partner-box__photo-img.p3_photo.icon.camera
+          span.partner-box__photo-name Diana Wells
+          span.partner-box__photo-description
+            | Living in Athens, Greece. I love black and white classics, chillout music and green tea.
+        .partner-box__photo-pic
+          .partner-box__photo-img.p4_photo.icon.plane
+          span.partner-box__photo-name Christopher Pierce
+          span.partner-box__photo-description Star Wars fanatic. I have a persistent enthusiasm to create new things.
+      button.partner-box__button See other partners
+    section.ideas-box
+      .ideas-box__text Discover holiday activity ideas
+      .ideas-box__img
+        .ideas-box__img1
+          span.ideas-box__img1-text Sports and Activis
+        .ideas-box__img2
+          span.ideas-box__img2-text Wellness and Health
+        .ideas-box__img3
+          span.ideas-box__img3-text
+            | Extreme Sports
+            | and Expeditions
+        .ideas-box__img4
+          span.ideas-box__img4-text Games
+        .ideas-box__img5
+          span.ideas-box__img5-text Culture and Education
+        .ideas-box__img6
+          span.ideas-box__img6-text Enjomet and Relaxation
+        .ideas-box__img7
+          span.ideas-box__img7-text Trevelling
+    section.form-box
+      .form-box__text Crate your holiday activity
+      label.form-box__label(for='form-box__search') Hi! What are your holiday interests?
+      form
+        input.form-box__search(type='text', name='text"', placeholder='Enter your insterests')
+        input.form-box__submit(type='submit', name='submit', value='Search partners')
+  footer.footer-box
+    .footer-box__logo Dreamshare
+    div
+      .footer-box__header Company
+      .footer-box__menu-text
+        ul About
+        ul Contact
+        ul Press
+        ul Blog
+        ul Terms and Privacy
+        ul Help
+    .footer-box__header Partners
+    .footer-box__designed
+      div Designed by
+      .footer-box__Areto_logo

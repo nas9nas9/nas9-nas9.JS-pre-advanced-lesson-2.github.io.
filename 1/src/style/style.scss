@@ -1,0 +1,815 @@
+@import 'base/base';
+@import 'base/mixin';
+@import 'base/variables';
+
+body {
+    font-family: 'Montserrat';
+}
+
+.wrapper {
+    width: 1440px;
+    min-height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.header-box {
+    width: 1440px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 46px;
+    &__logo {
+        @include text-style(20px, bold, 24px);
+        color: $white-color;
+        margin-left: 248px;
+    }
+    &__nav {
+        margin-right: 270px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__nav-item {
+        width: 90px;
+        height: 36px;
+        text-align: center;
+        padding: 5px;
+    }
+    &__nav-item:hover {
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 20px;
+    }
+    &__nav-link1 {
+        @include text-style(14px, normal, 17px);
+        text-decoration: none;
+        color: $white-color;
+        margin-right: 8px;
+    }
+}
+
+
+// ==============header================
+
+.main-box {
+    background-image: url(../images/bg/Bitmap.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.1);
+    mix-blend-mode: normal;
+    width: 1440px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__header {
+        width: 800px;
+        height: 500px;
+        padding: 50px 50px 50px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    &__text {
+        @include text-style(52px, bold, 63px);
+        color: $white-color;
+        margin-top: 75px;
+    }
+    &__description {
+        @include text-style(24px, normal, 24px);
+        color: $grey-color;
+        margin-top: 28.5px;
+    }
+    &__button {
+        @include text-style(14px, bold, 17px);
+        @include button(225px, 40px);
+        color: $white-color;
+        background-color: $red-color;
+        margin-top: 33px;
+        margin-left: 250px;
+    }
+    &__button:hover {
+        background-color: transparent;
+        color: $red-color;
+        border: 3px solid $red-color;
+    }
+}
+
+// ========main-box==========
+
+
+.works-box {
+    width: 1440px;
+    height: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 89px;
+    margin-bottom: 0;
+    &__text {
+        @include text-style(26px, bold, 32px);
+        color: #444444;
+    }
+    &__images {
+        width: 940px;
+        height: 467px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__button {
+        @include button(70px, 20px);
+        @include text-style(10px, normal, 12px);
+        background-color: $red-color;
+        color: $white-color;
+        margin-bottom: 18px;
+    }
+    &__button:hover {
+        background-color: transparent;
+        color: $red-color;
+        border: 3px solid $red-color;
+    }
+    &__header {
+        @include text-style(24px, bold, 27px);
+        color: $white-color;
+        margin-bottom: 20px;
+    }
+    &__description {
+        @include text-style(14px, normal, 14px);
+        color: #E3E3E3;
+    }
+    &__pic {
+        width: 300px;
+        height: 400px;
+        
+        &-first {
+            background-image: url(../images/bg/Step1.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            padding: 0 25px 50px 25px;
+
+        }
+        &-second {
+            background-image: url(../images/bg/Step2.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            padding: 0 25px 50px 25px;
+        }
+        &-third {
+            background-image: url(../images/bg/Step3.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-end;
+            padding: 0 25px 50px 25px;
+        }
+  
+    }
+
+}
+// ==========works-box==========
+.partner-box {
+    width: 1440px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &__text {
+        @include text-style(26px, bold, 32px);
+        color: #444444;
+        margin-bottom: 35px;
+    }
+    &__photo {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__photo-pic {
+        width: 221px;
+        height: 225px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 19px;
+    }
+    &__photo-img {
+        width: 126px;
+        height: 126px;
+        border-radius: 50%;
+    }
+    &__photo-name {
+        margin-top: 17px;
+        @include text-style(14px, bold, 17px);
+        color: #444444;
+    }
+    &__photo-description {
+        margin-top: 12px;
+        @include text-style(14px, normal, 14px);
+        color: #666666;
+        text-align: center;
+    }
+    &__button {
+        margin-top: 0px;
+        @include button(180px, 40px);
+        color: $white-color;
+        background-color: $red-color;
+        @include text-style(14px, bold, 17px);
+    }
+    &__button:hover {
+        background-color: transparent;
+        color: $red-color;
+        border: 3px solid $red-color;
+    }
+}
+.p1_photo {
+    background: url('../images/partners/1.png');
+}
+
+.p2_photo {
+    background: url('../images/partners/2.png');
+}
+
+.p3_photo {
+    background: url('../images/partners/3.png');
+}
+
+.p4_photo {
+    background: url('../images/partners/4.png');
+}
+
+.icon::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+    border-radius: 16px;
+    border: 2px solid $white-color;
+    top: 85px;
+    left: 90px;
+    position: relative;
+}
+
+.music::after {
+    background-color: $red-color;
+    background-image: url('../images/icons/1.svg');
+}
+
+.brush::after {
+    background-color: $brush-color;
+    background-image: url('../images/icons/2.svg');
+}
+
+.camera::after {
+    background-color: $camera-color;
+    background-image: url('../images/icons/3.svg');
+}
+
+.plane::after {
+    background-color: $plane-color;
+    background-image: url('../images/icons/4.svg');
+}
+
+// ==========partner-box===========
+.ideas-box {
+    width: 1440px;
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__text {
+        @include text-style(26px, bold, 32px);
+        color: #444444;
+        margin-top: 60px;
+    }
+    &__img {
+        width: 940px;
+        height: 1031px;
+        margin-top: 35px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__img1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 310px;
+        background-image: url(../images/ideas/1.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.3);
+        mix-blend-mode: normal;
+        @include text-style(22px, bold, 27px);
+        color: $white-color;
+    }
+    &__img2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 310px;
+        background-image: url(../images/ideas/2.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.3);
+        mix-blend-mode: normal;
+        @include text-style(22px, bold, 27px);
+        color: $white-color;
+    }
+    &__img3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 310px;
+        background-image: url(../images/ideas/3.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.3);
+        mix-blend-mode: normal;
+        @include text-style(22px, bold, 27px);
+        color: $white-color;
+        text-align: center;
+    }
+    &__img4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 310px;
+        background-image: url(../images/ideas/4.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.3);
+        mix-blend-mode: normal;
+        @include text-style(22px, bold, 27px);
+        color: $white-color;
+        text-align: center;
+    }
+    &__img5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 620px;
+        height: 310px;
+        background-image: url(../images/ideas/5.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.3);
+        mix-blend-mode: normal;
+        @include text-style(22px, bold, 27px);
+        color: $white-color;
+        text-align: center;
+    }
+    &__img6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 620px;
+        height: 310px;
+        background-image: url(../images/ideas/6.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.3);
+        mix-blend-mode: normal;
+        @include text-style(22px, bold, 27px);
+        color: $white-color;
+        text-align: center;
+    }
+    &__img7 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 310px;
+        background-image: url(../images/ideas/7.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.3);
+        mix-blend-mode: normal;
+        @include text-style(22px, bold, 27px);
+        color: $white-color;
+        text-align: center;
+    }
+    
+    
+}
+
+// ========ideas-box========
+
+.form-box {
+    width: 1440px;
+    height: 210px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__text {
+        @include text-style(26px, bold, 32px);
+        color: #444444;
+        margin-top: 45px;
+    }
+    &__label {
+        margin-top: 43px;
+        @include text-style(18px, normal, 14px);
+        color: #999999;
+    }
+    &__search {
+        margin-top: 25px;
+        @include text-style(14px, normal, 16px);
+        color: #999999;
+        width: 299px;
+        height: 40px;
+        background: #FFFFFF;
+        border: 2px solid #D4D4D4;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+        border-radius: 3px;
+    }
+    &__submit {
+        margin-left: 10px;
+        @include button(172px, 40px);
+        background-color: $red-color;
+        color: $white-color;
+        @include text-style(14px, bold, 17px);
+    }
+    &__submit:hover {
+        background-color: transparent;
+        color: $red-color;
+        border: 3px solid $red-color;
+    }
+}
+
+// ===========form-box==========
+
+.footer-box {
+    border-top: 2px solid $red-color;
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 100px;
+    padding: 30px;
+    &__logo {
+        @include text_style(16px, normal, 20px);
+        text-transform: uppercase;
+        color: $red-color;
+       
+    }
+    &__header {
+        @include text_style(14px, bold, 17px);
+        margin: 3px 53px 10px 0;
+    }
+    ul {
+        font-family: 'Roboto-Light', Helvetica, sans-serif;
+        @include text_style(14px, normal, 26px);
+        color: #999999;
+    }
+    &__designed {
+        @include text_style(11px, normal, 12px);
+        text-transform: uppercase;
+        color: #cccccc;
+        text-align: right;
+        margin: 2px -18px 0 0;
+    }
+    &__Areto_logo {
+        width: 110px;
+        height: 24px;
+        background-image: url('../images/footer_logo.png');
+        margin: 10px 0 0px 115px;
+    }
+}
+
+@media screen and (max-width: 1439px) and (min-width: 1241px) {
+    .wrapper {
+        width: 1240px;
+    }
+    .header-box {
+        width: 1240px;
+        height: 120px;
+        &__logo {
+            margin-left: 100px;
+        }
+        &__nav {
+            margin-right: 100px;
+        }
+    }
+    .main-box {
+        width: 1240px;
+    }
+    .works-box {
+        width: 1240px;
+    }
+    .partner-box {
+        width: 1240px;
+    }
+    .ideas-box {
+        width: 1240px;
+    }
+    .form-box {
+        width: 1240px;
+    }
+    .footer-box {
+        width: 1240px;
+    }
+
+}
+
+@media screen and (max-width: 1240px) and (min-width: 769px) {
+    .wrapper {
+        width: 768px;
+    }
+ 
+    .header-box {
+        width: 768px;
+        height: 120px;
+        &__logo {
+            margin-left: 100px;
+        }
+        &__nav {
+            margin-right: 100px;
+        }
+    }
+    .main-box {
+        width: 768px;
+    }
+    .works-box {
+        width: 768px;
+        &__images {
+            width: 748px;
+            height: 461px;
+            justify-content: space-between;
+        }
+        &__pic {
+            width: 236px;
+            height: 400px;
+            &-first {
+                width: 236px;
+                height: 400px;
+                margin-top: 20px;
+            }
+            &-second {
+                width: 236px;
+                height: 400px;
+                margin-top: 20px;
+            }
+            &-third {
+                width: 236px;
+                height: 400px;
+                margin-top: 20px;
+            }
+        }
+    }
+    .partner-box {
+        width: 768px;
+        height: 680px;
+        padding: 0 80px 0 80px;
+        &__button {
+            margin-top: 30px;
+        }
+    }
+    .ideas-box {
+        width: 768px;
+        &__img {
+            width: 748px;
+            height: 1031px;
+        }
+        &__img1 {
+            width: 236px;
+        }
+        &__img2 {
+            width: 236px;
+            text-align: center;
+        }
+        &__img3 {
+            width: 236px;
+        }
+        &__img4 {
+            width: 236px;
+        }
+        &__img5 {
+            width: 492px;
+            text-align: center;
+        }
+        &__img6 {
+            width: 492px;
+        }
+        &__img7 {
+            width: 236px;
+        }
+    }
+    .form-box {
+        width: 768px;
+    }
+    .footer-box {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .wrapper {
+        width: 320px;
+    }
+
+    .header-box {
+        width: 320px;
+        height: 120px;
+        &__logo {
+            display: none;
+        }
+        &__nav {
+            margin-left: 90px;
+        }
+    }
+    .main-box {
+        width: 320px;
+        height: 540px;
+        &__header {
+            width: 281px;
+            height: 234px;
+            padding: 0px;
+        }
+        &__text {
+            @include text-style(30px, bold, 37px);
+            margin-top: 10px;
+        }
+        &__description {
+            @include text-style(18px, normal, 24px);
+            margin-top: 28.5px;
+        }
+        &__button {
+            @include button(280px, 40px);
+            margin-top: 33px;
+            margin-left: 5px;
+        }
+    }
+    .works-box {
+        width: 320px;
+        margin-top: 10px;
+        margin-bottom: 300px;
+        &__text {
+            @include text-style(22px, bold, 27px);
+        }
+        &__images {
+            width: 320px;
+            height: 1010px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        &__pic {
+            width: 300px;
+            height: 240px;
+            &-first {
+                width: 300px;
+                height: 240px;
+                margin-top: 20px;
+                padding-bottom: 10px;
+            }
+            &-second {
+                width: 300px;
+                height: 240px;
+                margin-top: 20px;
+                padding-bottom: 10px;
+            }
+            &-third {
+                width: 300px;
+                height: 240px;
+                margin-top: 20px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    .partner-box {
+        width: 320px;
+        height: 1200px;
+        padding: 0 80px 0 80px;
+        &__text {
+            width: 280px;
+            height: 54px;
+            text-align: center;
+            @include text-style(22px, bold, 27px);
+        }
+        &__button {
+            @include button(280px, 40px);
+            margin-top: 30px;
+        }
+    }
+    .ideas-box {
+        width: 320px;
+        height: 1000px;
+        margin-top: 40px;
+        &__text {
+            @include text-style(22px, bold, 27px);
+            margin-top: 0;
+        }
+        &__img {
+            width: 320px;
+            height: 1031px;
+            justify-content: center;
+            align-items: center;
+        }
+        &__img1 {
+            width: 300px;
+            height: 120px;
+        }
+        &__img2 {
+            width: 300px;
+            height: 120px;
+            text-align: center;
+        }
+        &__img3 {
+            width: 300px;
+            height: 120px;
+        }
+        &__img4 {
+            width: 300px;
+            height: 120px;
+        }
+        &__img5 {
+            width: 300px;
+            height: 120px;
+            text-align: center;
+        }
+        &__img6 {
+            width: 300px;
+            height: 120px;
+        }
+        &__img7 {
+            width: 300px;
+            height: 120px;
+        }
+    }
+    .form-box {
+        width: 320px;
+        justify-content: center;
+        align-items: center;
+        &__text {
+            @include text-style(22px, bold, 27px);
+            margin-top: 0px;
+        }
+        &__label {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            @include text-style(18px, normal, 14px);
+            color: #999999;
+        }
+        &__search{
+            margin-top: 0px;
+            margin-left: 5px;
+        }
+        &__submit {
+            margin-top: 10px;
+            margin-left: 60px;
+        }
+    }
+    .footer-box {
+        width: 320px;
+        height: 210px;
+        margin-top: 0px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        &__logo {
+            margin-left: 40px;
+        }
+        &__menu-text {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-left: 70px;
+        }
+        &__header {
+            margin-left: 90px;
+            text-align: center;
+        }
+        &__Areto_logo {
+            margin: 0px;
+        }
+
+        
+    }
+}
